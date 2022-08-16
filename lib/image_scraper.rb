@@ -27,6 +27,8 @@ class ImageScraper
   end
 
   def scrape_posts(subreddit_json, subreddit_name)
+    return if subreddit_json['reason']
+
     subreddit_json['data']['children'].each do |post|
       url = post_url(post)
       extension = post_extension(url)
@@ -58,4 +60,5 @@ class ImageScraper
   def is_image?(extension)
     %w[png jpg jpeg gif gifv].include? extension
   end
+
 end
