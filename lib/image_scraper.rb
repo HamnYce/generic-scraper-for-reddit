@@ -35,7 +35,7 @@ class ImageScraper
 
       next unless is_image? extension
 
-      File.open("#{@output_dir}/#{subreddit_name}/#{post_title(post)}.#{extension}", 'w') { |image|
+      File.open("#{@output_dir}/#{subreddit_name}/#{post_title(post)}.#{extension}", 'wb') { |image|
         image.write URI(url).read
       }
     end
