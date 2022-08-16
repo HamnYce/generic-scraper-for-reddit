@@ -16,16 +16,23 @@ subreddit_amount = gets.chomp.to_i
 puts "how would you like the safety to be?\ns for sfw,\nns for nsfw,\nb for both"
 safety = gets.chomp.downcase
 
+
+puts 'would you like exact word matches? (y/N)'
+
+exact = gets.chomp
+
+exact = (exact == 'y' ? '-e' : '')
+
 amount = if %w[s ns].include? safety
-           JsonScraper.search(query_term, subreddit_amount, "#{safety}fw")
+           JsonScraper.search(query_term, subreddit_amount, "#{safety}fw", exact)
          elsif safety == 'b'
-           JsonScraper.search(query_term, subreddit_amount, 'sfw') +
-             JsonScraper.search(query_term, subreddit_amount, 'nsfw')
+           JsonScraper.search(query_term, subreddit_amount, 'sfw', exact) +
+           JsonScraper.search(query_term, subreddit_amount, 'nsfw', exact)
          else
            'error'
          end
 
-# ُُTODO:: output every time a new subredit is being parsed
+# ُُTODO:: output every time a new subreddit is being parsed
 # TODO:: add progress bar
 # TODO:: add question if the user want's new, hot, best, top
 # TODO:: if top ask for day, year, all-time etc
