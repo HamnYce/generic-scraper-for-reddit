@@ -13,7 +13,7 @@ puts 'how many subreddits would you like to search in total?'
 
 subreddit_amount = gets.chomp.to_i
 
-puts "how would you like the safety to be?\ns for sfw,\nns for nsfw,\nb for both)"
+puts "how would you like the safety to be?\ns for sfw,\nns for nsfw,\nb for both"
 safety = gets.chomp.downcase
 
 amount = if %w[s ns].include? safety
@@ -24,5 +24,10 @@ amount = if %w[s ns].include? safety
          else
            'error'
          end
+
+# ُُTODO:: output every time a new subredit is being parsed
+# TODO:: add progress bar
+# TODO:: add question if the user want's new, hot, best, top
+# TODO:: if top ask for day, year, all-time etc
 
 ImageScraper.new(query_term).scrape_all_jsons

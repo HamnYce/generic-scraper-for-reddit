@@ -52,7 +52,7 @@ class ImageScraper
   end
 
   def post_title(post_json)
-    post_json['data']['title']
+    post_json['data']['title'].split('/')[0][0..20]
   end
 
   def is_image?(extension)
