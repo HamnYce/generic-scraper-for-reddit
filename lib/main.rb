@@ -3,6 +3,9 @@
 require_relative 'json_scraper'
 require_relative 'image_scraper'
 
+Dir.mkdir 'top_listings' unless Dir.exist? 'top_listings'
+Dir.mkdir 'images' unless Dir.exist? 'images'
+
 
 puts "please enter term of subreddits you would like to use?\nExample: input = 'anime'
 Will search for subreddits like r/anime, r/animeArt, r/animemes etc."
