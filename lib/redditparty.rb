@@ -11,7 +11,7 @@ class RedditParty
 
   CONTENT_TYPE = 'application/json'
   ACCEPT = '*/*'
-  BEARER_TOKEN = '138365295012-96Yu6UgeQZqEeEv0cxjN4pZPYGRFTw'
+  BEARER_TOKEN = '138365295012-ANGfRCSdd6X6E8WRyWqRQsa4S-SUag'
 
   USER_AGENT = 'homiewassup'
 
