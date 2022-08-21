@@ -3,7 +3,7 @@
 ## pre-reqs
 - ruby 3.1.2
 - fzf (brew install fzf on mac)
-- httparty gem (after installing ruby run gem install httparty)
+- httparty gem (after installing ruby run, ```gem install httparty)```
 - you will need a reddit bearer token (follow below link)
 - https://github.com/reddit-archive/reddit/wiki/OAuth2
 - place the bearer token inside redditparty.rb
