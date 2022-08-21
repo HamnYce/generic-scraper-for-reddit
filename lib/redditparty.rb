@@ -11,9 +11,9 @@ class RedditParty
 
   CONTENT_TYPE = 'application/json'
   ACCEPT = '*/*'
-  BEARER_TOKEN = '138365295012-ANGfRCSdd6X6E8WRyWqRQsa4S-SUag'
+  BEARER_TOKEN = 'Place_bearer_token_here'
 
-  USER_AGENT = 'homiewassup'
+  USER_AGENT = 'add_own_user_agent'
 
   base_uri 'https://oauth.reddit.com'
   headers({ 'content-type' => CONTENT_TYPE,'accept' => ACCEPT,
